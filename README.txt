@@ -1,3 +1,3 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/m-paniagua/pen/QgKWeM.
+Displays local weather, allows user to toggle between C/F https://m-paniagua.github.io/weather-app/
 
  
