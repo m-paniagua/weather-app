@@ -1,0 +1,13 @@
+#weather {
+  border-style: solid;
+  text-align: center;
+}
+
+#header{
+  text-align: center;
+}
+
+#author{
+  font-size: 1.5em;
+  font-weight: bold;
+}
