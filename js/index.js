@@ -28,7 +28,7 @@ function render(weather, celcius) {
   // $('#high').text('Low: ' + low);
 
   var url = 'http://openweathermap.org/img/w/' + icon + '.png';
-  $('#current').prepend('<img src="' + url + '"><br>');  
+  $('#image').html('<img src="' + url + '">'); 
 }
 
 function getWeather() {
