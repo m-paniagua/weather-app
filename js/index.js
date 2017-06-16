@@ -2,6 +2,7 @@
 var API_KEY = '271d38ae6cbd9ace72d6432471f794fd';
 var celcius = false;
 var weather;
+var zip;
 
 function displayTemp(temp, c) {
   if(c) {
@@ -30,10 +31,9 @@ function render(weather, celcius) {
   $('#current').prepend('<img src="' + url + '"><br>');  
 }
 
-$(function() {
-  var zip;  
-  
-  function getWeather() {
+function getWeather() {
+    // set color
+    setColor();
     // get zip code
     $.getJSON('https://ipinfo.io/', function(data){
       zip = data.postal;
@@ -52,6 +52,28 @@ $(function() {
       })
     })
   }
+
+function setColor() {
+    var currentTime = new Date().getHours();
+    if(currentTime >= 6 && currentTime <= 12) {
+//        $('#weather').css("background-color", '#ffdb00');
+        $('body').css("background-color", "#e8817f");
+    }
+    else if (currentTime > 12 && currentTime <= 5) {
+        $('body').css("background-color", "#c3727c");  
+//        $('#weather').css("background-color", "red");
+    }
+    else if (currentTime > 5 && currentTime <= 8) {
+        $('body').css("background-color", "#8d5273");
+//        $('#weather').css("background-color", "red");
+    }
+    else {
+        $('body').css("background-color", "#5a336e");
+//        $('#weather').css("background-color", "red");
+    }
+}
+
+$(function() {
   
   getWeather();
 });

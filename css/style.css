@@ -1,13 +1,20 @@
+@font-face {
+	font-family: 'haxr';
+	src: url('haxrcorpttf.ttf');
+}
+
+body {
+    font-family: 'haxr';
+}
 #weather {
-  border-style: solid;
+  border-style: double;
   text-align: center;
+  color: #eee;
+/*  background-color: #eee;*/
 }
 
 #header{
   text-align: center;
+  color: #eee;
 }
 
-#author{
-  font-size: 1.5em;
-  font-weight: bold;
-}
